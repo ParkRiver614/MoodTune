@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoodTune - 기분에 맞는 음악 추천</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-icon">🎵</span>
+        <h1 class="logo-text">MoodTune</h1>
+      </div>
+      <p class="tagline">기분과 날씨에 딱 맞는 음악을 찾아드려요</p>
+      <div id="spotify-status" class="spotify-status spotify-status--checking">
+        <span id="spotify-status-dot" class="status-dot"></span>
+        <span id="spotify-status-label">확인 중...</span>
+      </div>
+    </header>
+
+    <div class="app-layout">
+      <!-- ── 왼쪽 사이드바 ── -->
+      <aside class="sidebar">
+
+        <section class="selection-section" id="mood-section">
+          <h2 class="section-title">
+            <span class="step-badge">1</span>
+            지금 기분이 어떠세요?
+          </h2>
+          <div class="mood-grid">
+            <button class="mood-card" data-mood="happy"><span class="card-emoji">😊</span><span class="card-label">행복해요</span></button>
+            <button class="mood-card" data-mood="energetic"><span class="card-emoji">⚡</span><span class="card-label">신나요</span></button>
+            <button class="mood-card" data-mood="calm"><span class="card-emoji">😌</span><span class="card-label">차분해요</span></button>
+            <button class="mood-card" data-mood="romantic"><span class="card-emoji">💕</span><span class="card-label">설레요</span></button>
+            <button class="mood-card" data-mood="sad"><span class="card-emoji">😢</span><span class="card-label">슬퍼요</span></button>
+            <button class="mood-card" data-mood="melancholy"><span class="card-emoji">🌙</span><span class="card-label">쓸쓸해요</span></button>
+          </div>
+        </section>
+
+        <section class="selection-section" id="weather-section">
+          <h2 class="section-title">
+            <span class="step-badge">2</span>
+            오늘 날씨는요?
+          </h2>
+          <div class="auto-weather-bar">
+            <button id="auto-weather-btn" class="auto-weather-btn">📍 자동 감지</button>
+            <span id="weather-status" class="weather-status"></span>
+          </div>
+          <div class="weather-grid">
+            <button class="weather-card" data-weather="sunny"><span class="card-emoji">☀️</span><span class="card-label">맑음</span></button>
+            <button class="weather-card" data-weather="cloudy"><span class="card-emoji">☁️</span><span class="card-label">흐림</span></button>
+            <button class="weather-card" data-weather="rainy"><span class="card-emoji">🌧️</span><span class="card-label">비</span></button>
+            <button class="weather-card" data-weather="snowy"><span class="card-emoji">❄️</span><span class="card-label">눈</span></button>
+            <button class="weather-card" data-weather="hot"><span class="card-emoji">🌡️</span><span class="card-label">더워요</span></button>
+            <button class="weather-card" data-weather="cold"><span class="card-emoji">🥶</span><span class="card-label">추워요</span></button>
+          </div>
+        </section>
+
+        <section class="selection-section" id="genre-section">
+          <h2 class="section-title">
+            <span class="step-badge">3</span>
+            장르 <span class="optional">(선택사항)</span>
+          </h2>
+          <div class="genre-chips">
+            <button class="genre-chip active" data-genre="all">전체</button>
+            <button class="genre-chip" data-genre="kpop">K-Pop</button>
+            <button class="genre-chip" data-genre="jpop">J-Pop</button>
+            <button class="genre-chip" data-genre="pop">Pop</button>
+            <button class="genre-chip" data-genre="hiphop">Hip-Hop</button>
+            <button class="genre-chip" data-genre="rnb">R&amp;B</button>
+            <button class="genre-chip" data-genre="indie">Indie</button>
+          </div>
+        </section>
+
+        <div class="sidebar-cta">
+          <button id="recommend-btn" class="recommend-btn" disabled>🎵 음악 추천 받기</button>
+          <button id="shuffle-btn" class="shuffle-btn" style="display:none">🔀 다시 추천</button>
+          <p class="hint" id="hint-text">기분과 날씨를 모두 선택해주세요</p>
+        </div>
+
+      </aside>
+
+      <!-- ── 오른쪽 본문 ── -->
+      <main class="main-area">
+
+        <div class="main-placeholder" id="main-placeholder">
+          <div class="placeholder-icon">🎵</div>
+          <p class="placeholder-text">기분과 날씨를 선택하고<br>음악 추천을 받아보세요</p>
+        </div>
+
+        <div id="loading-indicator" class="loading-indicator" style="display:none">
+          <div class="spinner"></div>
+          <p>iTunes에서 곡을 불러오는 중...</p>
+        </div>
+
+        <!-- 탭 바 -->
+        <div class="tab-bar" id="tab-bar" style="display:none">
+          <button class="tab-btn" id="tab-mood-btn" data-tab="mood">😊 기분 기반</button>
+          <button class="tab-btn" id="tab-weather-btn" data-tab="weather">☁️ 날씨 기반</button>
+        </div>
+
+        <!-- 기분 기반 추천 -->
+        <section class="results-section" id="mood-results-section">
+          <div class="results-header">
+            <div>
+              <h2 class="results-title" id="mood-results-title">😊 기분 기반 추천</h2>
+              <p class="results-subtitle" id="mood-results-subtitle"></p>
+            </div>
+          </div>
+          <div class="songs-grid" id="mood-songs-grid"></div>
+          <p class="no-results" id="mood-no-results" style="display:none">
+            선택한 조건에 맞는 곡이 없어요.<br>장르 필터를 변경해보세요!
+          </p>
+        </section>
+
+        <!-- 날씨 기반 추천 -->
+        <section class="results-section" id="weather-results-section">
+          <div class="results-header">
+            <div>
+              <h2 class="results-title" id="weather-results-title">☁️ 날씨 기반 추천</h2>
+              <p class="results-subtitle" id="weather-results-subtitle"></p>
+            </div>
+          </div>
+          <div class="songs-grid" id="weather-songs-grid"></div>
+          <p class="no-results" id="weather-no-results" style="display:none">
+            선택한 조건에 맞는 곡이 없어요.<br>장르 필터를 변경해보세요!
+          </p>
+        </section>
+
+      </main>
+    </div>
+
+    <footer class="app-footer">
+      <p>MoodTune · 기분에 맞는 음악을 찾아드려요 🎵</p>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
