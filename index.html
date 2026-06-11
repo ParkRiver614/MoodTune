@@ -14,11 +14,29 @@
         <h1 class="logo-text">MoodTune</h1>
       </div>
       <p class="tagline">기분과 날씨에 딱 맞는 음악을 찾아드려요</p>
+      <button id="fav-open-btn" class="fav-header-btn">
+        ❤️ 즐겨찾기
+        <span id="fav-badge" class="fav-badge" style="display:none">0</span>
+      </button>
       <div id="spotify-status" class="spotify-status spotify-status--checking">
         <span id="spotify-status-dot" class="status-dot"></span>
         <span id="spotify-status-label">확인 중...</span>
       </div>
     </header>
+
+    <!-- 즐겨찾기 모달 -->
+    <div id="fav-modal" class="fav-modal">
+      <div class="fav-modal-inner">
+        <div class="fav-modal-header">
+          <h2 class="fav-modal-title">❤️ 즐겨찾기</h2>
+          <button id="fav-close-btn" class="fav-close-btn">✕</button>
+        </div>
+        <div class="songs-grid" id="fav-songs-grid"></div>
+        <p class="no-results" id="fav-no-results" style="display:none">
+          아직 즐겨찾기한 곡이 없어요.<br>마음에 드는 곡의 ❤️ 를 눌러보세요!
+        </p>
+      </div>
+    </div>
 
     <div class="app-layout">
       <!-- ── 왼쪽 사이드바 ── -->
