@@ -511,7 +511,6 @@ const LOCAL_SONGS = [
   { id:482, title:"Golden",                  artist:"Cleo Sol",              genre:"rnb",    moods:["romantic","calm"],        weather:["sunny","cloudy"]   },
   { id:483, title:"Rockstar",                artist:"Post Malone",           genre:"hiphop", moods:["energetic","melancholy"], weather:["cloudy"]           },
   { id:484, title:"Swimming",                artist:"Megan Thee Stallion",   genre:"hiphop", moods:["energetic","happy"],      weather:["hot","sunny"]      },
-  { id:485, title:"Caramel",                 artist:"NewJeans",              genre:"kpop",   moods:["happy","calm"],           weather:["sunny"]            },
   // ── K-Pop 겨울/눈 추가 ────────────────────────────────────────────
   { id:486, title:"눈의 꽃",                  artist:"Park Hyo Shin",         genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:487, title:"Winter Flower",           artist:"Younha",                genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
