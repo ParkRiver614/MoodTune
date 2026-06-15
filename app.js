@@ -65,7 +65,6 @@ const LOCAL_SONGS = [
   { id:58, title:"HUMBLE.",           artist:"Kendrick Lamar",        genre:"hiphop", moods:["energetic"],              weather:["sunny","hot"]      },
   { id:60, title:"Love Yourz",        artist:"J. Cole",               genre:"hiphop", moods:["calm","melancholy"],      weather:["cloudy","rainy"]   },
   { id:61, title:"Artist",            artist:"지코",                  genre:"hiphop", moods:["calm","melancholy"],      weather:["cloudy","rainy"]   },
-  { id:62, title:"Homesick",          artist:"pH-1",                  genre:"hiphop", moods:["sad","melancholy"],       weather:["rainy","cold"]     },
   // R&B
   { id:64, title:"Thinkin Bout You",  artist:"Frank Ocean",           genre:"rnb",    moods:["sad","romantic"],         weather:["rainy","cold"]     },
   { id:65, title:"Good Days",         artist:"SZA",                   genre:"rnb",    moods:["calm","happy"],           weather:["sunny","cloudy"]   },
@@ -163,7 +162,6 @@ const LOCAL_SONGS = [
   { id:154, title:"Soulmate",                  artist:"지코",                  genre:"hiphop", moods:["happy","energetic"],      weather:["sunny"]            },
   { id:155, title:"Pursuit of Happiness",      artist:"Kid Cudi",              genre:"hiphop", moods:["energetic","melancholy"], weather:["cloudy"]           },
   { id:156, title:"All the Stars",             artist:"Kendrick Lamar",        genre:"hiphop", moods:["calm","energetic"],       weather:["sunny"]            },
-  { id:157, title:"WIFI",                      artist:"pH-1",                  genre:"hiphop", moods:["happy","energetic"],      weather:["sunny"]            },
   // R&B 추가
   { id:158, title:"Sure Thing",                artist:"Miguel",                genre:"rnb",    moods:["romantic","calm"],        weather:["sunny"]            },
   { id:159, title:"Trip",                      artist:"Jhené Aiko",            genre:"rnb",    moods:["calm","melancholy"],      weather:["cloudy"]           },
@@ -521,7 +519,7 @@ const LOCAL_SONGS = [
   { id:493, title:"눈꽃",                     artist:"FT Island",             genre:"kpop",   moods:["romantic","sad"],         weather:["cold","snowy"]     },
   { id:494, title:"겨울 나무",                 artist:"BTOB",                  genre:"kpop",   moods:["melancholy","calm"],      weather:["cold","snowy"]     },
   { id:495, title:"Snow",                    artist:"Stray Kids",            genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
-  { id:496, title:"눈",                       artist:"Lim Chang-jung",        genre:"kpop",   moods:["sad","melancholy"],       weather:["cold","snowy"]     },
+
   { id:497, title:"제발",                     artist:"2AM",                   genre:"kpop",   moods:["sad","melancholy"],       weather:["cold","rainy"]     },
   { id:498, title:"Winter Child",            artist:"크러쉬",                 genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:499, title:"눈물이 뚝뚝",               artist:"GFriend",               genre:"kpop",   moods:["sad","melancholy"],       weather:["cold","snowy"]     },
