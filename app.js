@@ -101,7 +101,7 @@ const LOCAL_SONGS = [
   { id:94,  title:"Melted",                    artist:"AKMU",                  genre:"kpop",   moods:["calm","melancholy"],      weather:["cloudy","cold"]    },
   { id:95,  title:"How Can I Love the Heartbreak", artist:"AKMU",             genre:"kpop",   moods:["sad","melancholy"],       weather:["rainy"]            },
   { id:96,  title:"Me After You",              artist:"Paul Kim",              genre:"kpop",   moods:["sad","melancholy"],       weather:["rainy","cold"]     },
-  { id:97,  title:"Instagram",                 artist:"DEAN",                  genre:"kpop",   moods:["melancholy","calm"],      weather:["cloudy","cold"]    },
+  { id:97,  title:"Instagram",                 artist:"DEAN",                  genre:"rnb",    moods:["melancholy","calm"],      weather:["cloudy","cold"]    },
   { id:98,  title:"She's Fine",                artist:"Heize",                 genre:"kpop",   moods:["melancholy","calm"],      weather:["rainy","cloudy"]   },
   { id:99,  title:"Black Swan",                artist:"BTS",                   genre:"kpop",   moods:["melancholy","sad"],       weather:["cloudy"]           },
   { id:100, title:"Im Hero",                   artist:"Lim Young-woong",       genre:"kpop",   moods:["romantic","calm"],        weather:["cloudy","sunny"]   },
@@ -109,7 +109,7 @@ const LOCAL_SONGS = [
   { id:102, title:"Lovesong",                  artist:"CNBLUE",                genre:"kpop",   moods:["romantic","sad"],         weather:["rainy","cloudy"]   },
   { id:103, title:"Gravity",                   artist:"WOODZ",                 genre:"kpop",   moods:["romantic","melancholy"],  weather:["rainy","cold"]     },
   { id:104, title:"Flicker",                   artist:"WINNER",                genre:"kpop",   moods:["calm","melancholy"],      weather:["cloudy","cold"]    },
-  { id:105, title:"Polaroid",                  artist:"Lim Chang-jung",        genre:"kpop",   moods:["romantic","sad"],         weather:["rainy"]            },
+  { id:105, title:"Polaroid Love",             artist:"ENHYPEN",               genre:"kpop",   moods:["romantic","happy"],       weather:["sunny","cloudy"]   },
   { id:106, title:"Fine",                      artist:"TAEYEON",               genre:"kpop",   moods:["sad","melancholy"],       weather:["rainy","cold"]     },
   { id:107, title:"Make A Wish",               artist:"EXO-CBX",               genre:"kpop",   moods:["happy","energetic"],      weather:["sunny"]            },
   { id:108, title:"Rollin'",                   artist:"Brave Girls",           genre:"kpop",   moods:["happy","energetic"],      weather:["sunny","hot"]      },
@@ -160,7 +160,7 @@ const LOCAL_SONGS = [
   { id:151, title:"Redbone",                   artist:"Childish Gambino",      genre:"hiphop", moods:["romantic","calm"],        weather:["cloudy","rainy"]   },
   { id:152, title:"Industry Baby",             artist:"Lil Nas X",             genre:"hiphop", moods:["energetic","happy"],      weather:["sunny","hot"]      },
   { id:153, title:"SICKO MODE",                artist:"Travis Scott",          genre:"hiphop", moods:["energetic"],              weather:["hot","sunny"]      },
-  { id:154, title:"CELEB",                     artist:"Zico",                  genre:"hiphop", moods:["happy","energetic"],      weather:["sunny"]            },
+  { id:154, title:"Soulmate",                  artist:"Zico",                  genre:"hiphop", moods:["happy","energetic"],      weather:["sunny"]            },
   { id:155, title:"Pursuit of Happiness",      artist:"Kid Cudi",              genre:"hiphop", moods:["energetic","melancholy"], weather:["cloudy"]           },
   { id:156, title:"All the Stars",             artist:"Kendrick Lamar",        genre:"hiphop", moods:["calm","energetic"],       weather:["sunny"]            },
   { id:157, title:"WIFI",                      artist:"pH-1",                  genre:"hiphop", moods:["happy","energetic"],      weather:["sunny"]            },
@@ -202,7 +202,7 @@ const LOCAL_SONGS = [
   { id:190, title:"HIP",                       artist:"MAMAMOO",               genre:"kpop",   moods:["energetic"],              weather:["sunny","hot"]      },
   { id:191, title:"Wind Flower",               artist:"MAMAMOO",               genre:"kpop",   moods:["romantic","calm"],        weather:["rainy","cloudy"]   },
   { id:192, title:"위잉위잉",                    artist:"Hyukoh",                genre:"kpop",   moods:["melancholy","calm"],      weather:["rainy","cloudy"]   },
-  { id:193, title:"Love YoYo",                 artist:"Hyukoh",                genre:"kpop",   moods:["calm","happy"],           weather:["sunny","cloudy"]   },
+  { id:193, title:"LOVE YA!",                 artist:"Hyukoh",                genre:"kpop",   moods:["calm","happy"],           weather:["sunny","cloudy"]   },
   { id:194, title:"Americano",                 artist:"10cm",                  genre:"kpop",   moods:["happy","calm"],           weather:["sunny"]            },
   { id:195, title:"Shoot Me",                  artist:"DAY6",                  genre:"kpop",   moods:["energetic","sad"],        weather:["cloudy"]           },
   { id:196, title:"You Were Beautiful",        artist:"DAY6",                  genre:"kpop",   moods:["sad","melancholy"],       weather:["rainy"]            },
@@ -329,7 +329,7 @@ const LOCAL_SONGS = [
   { id:311, title:"You Are",                  artist:"GOT7",                  genre:"kpop",   moods:["happy","romantic"],       weather:["sunny"]            },
   { id:312, title:"Superhuman",               artist:"NCT 127",               genre:"kpop",   moods:["energetic"],              weather:["hot","sunny"]      },
   { id:313, title:"Missing You",              artist:"BTOB",                  genre:"kpop",   moods:["sad","melancholy"],       weather:["cold","rainy"]     },
-  { id:314, title:"Winter Is Coming",         artist:"BIGBANG",               genre:"kpop",   moods:["melancholy","romantic"],  weather:["cold","snowy"]     },
+  { id:314, title:"Still Life",               artist:"BIGBANG",               genre:"kpop",   moods:["melancholy","calm"],      weather:["cloudy","cold"]    },
   { id:315, title:"My Star",                  artist:"Lee Hi",                genre:"kpop",   moods:["romantic","melancholy"],  weather:["cold","snowy"]     },
   // J-Pop 추가 3차
   { id:316, title:"The Beginning",            artist:"ONE OK ROCK",           genre:"jpop",   moods:["energetic"],              weather:["sunny"]            },
@@ -374,11 +374,11 @@ const LOCAL_SONGS = [
   { id:354, title:"Talk",                     artist:"Khalid",                genre:"pop",    moods:["romantic","calm"],        weather:["sunny","cloudy"]   },
   // Hip-Hop 추가 3차
   { id:355, title:"Swimming Pools",           artist:"Kendrick Lamar",        genre:"hiphop", moods:["melancholy","calm"],      weather:["hot","sunny"]      },
-  { id:356, title:"Pink + White",             artist:"Frank Ocean",           genre:"hiphop", moods:["calm","happy"],           weather:["sunny"]            },
+  { id:356, title:"Pink + White",             artist:"Frank Ocean",           genre:"rnb",    moods:["calm","happy"],           weather:["sunny"]            },
   { id:357, title:"Apparently",               artist:"J. Cole",               genre:"hiphop", moods:["calm","melancholy"],      weather:["cloudy"]           },
   { id:358, title:"SPOT!",                    artist:"Zico",                  genre:"hiphop", moods:["energetic","happy"],      weather:["hot","sunny"]      },
-  { id:359, title:"Counting Stars",           artist:"pH-1",                  genre:"hiphop", moods:["romantic","calm"],        weather:["rainy","cloudy"]   },
-  { id:360, title:"Leave The Door Open",      artist:"Silk Sonic",            genre:"hiphop", moods:["romantic","calm"],        weather:["sunny"]            },
+  { id:359, title:"Counting Stars",           artist:"OneRepublic",           genre:"pop",    moods:["happy","energetic"],      weather:["sunny","cloudy"]   },
+  { id:360, title:"Leave The Door Open",      artist:"Silk Sonic",            genre:"rnb",    moods:["romantic","calm"],        weather:["sunny"]            },
   { id:361, title:"Objects in the Mirror",    artist:"Mac Miller",            genre:"hiphop", moods:["melancholy","calm"],      weather:["cloudy"]           },
   { id:362, title:"Day Day",                  artist:"BewhY",                 genre:"hiphop", moods:["energetic","happy"],      weather:["sunny"]            },
   // R&B 추가 3차
@@ -411,9 +411,8 @@ const LOCAL_SONGS = [
   { id:387, title:"Sing For You",            artist:"EXO",                   genre:"kpop",   moods:["romantic","sad"],         weather:["cold","snowy"]     },
   { id:388, title:"광화문에서",                  artist:"Kyuhyun",               genre:"kpop",   moods:["romantic","sad"],         weather:["cold","snowy"]     },
   { id:389, title:"All About You",           artist:"Taeyeon",               genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
-  { id:390, title:"Snow Flower",             artist:"MAMAMOO",               genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:391, title:"White",                   artist:"INFINITE",              genre:"kpop",   moods:["melancholy","calm"],      weather:["cold","snowy"]     },
-  { id:392, title:"Christmas Love",          artist:"BTS",                   genre:"kpop",   moods:["happy","romantic"],       weather:["cold","snowy"]     },
+  { id:392, title:"Christmas Love",          artist:"Jimin",                 genre:"kpop",   moods:["happy","romantic"],       weather:["cold","snowy"]     },
   { id:393, title:"Last Night Story",        artist:"IU",                    genre:"kpop",   moods:["calm","melancholy"],      weather:["cold","snowy"]     },
   { id:394, title:"Fool",                    artist:"WINNER",                genre:"kpop",   moods:["sad","melancholy"],       weather:["cold","snowy"]     },
   { id:395, title:"Marry Me",                artist:"TWICE",                 genre:"kpop",   moods:["romantic","happy"],       weather:["cold","snowy"]     },
@@ -421,7 +420,7 @@ const LOCAL_SONGS = [
   { id:397, title:"Ice",                     artist:"Epik High",             genre:"kpop",   moods:["melancholy","calm"],      weather:["cold","snowy"]     },
   { id:398, title:"I Love You",              artist:"Lim Young-woong",       genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:399, title:"눈 (Snow)",                artist:"Paul Kim",              genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
-  { id:400, title:"Lucid Dream",             artist:"SHINee",                genre:"kpop",   moods:["sad","melancholy"],       weather:["cold","snowy"]     },
+  { id:400, title:"Lucid Dreams",            artist:"Juice WRLD",            genre:"hiphop", moods:["sad","melancholy"],       weather:["rainy","cold"]     },
   { id:401, title:"Every Single Day",        artist:"Sung Si-kyung",         genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:402, title:"겨울 (Winter)",             artist:"Crush",                 genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:403, title:"Awake",                   artist:"BTS",                   genre:"kpop",   moods:["melancholy","sad"],       weather:["cold","snowy"]     },
@@ -510,12 +509,12 @@ const LOCAL_SONGS = [
   { id:481, title:"As Much as I Love You",   artist:"Lucky Daye",            genre:"rnb",    moods:["romantic","calm"],        weather:["rainy","cloudy"]   },
   { id:482, title:"Golden",                  artist:"Cleo Sol",              genre:"rnb",    moods:["romantic","calm"],        weather:["sunny","cloudy"]   },
   { id:483, title:"Rockstar",                artist:"Post Malone",           genre:"hiphop", moods:["energetic","melancholy"], weather:["cloudy"]           },
-  { id:484, title:"Swimming",                artist:"Megan Thee Stallion",   genre:"hiphop", moods:["energetic","happy"],      weather:["hot","sunny"]      },
+  { id:484, title:"Fantasy Pool Party",      artist:"Megan Thee Stallion",   genre:"hiphop", moods:["energetic","happy"],      weather:["hot","sunny"]      },
   // ── K-Pop 겨울/눈 추가 ────────────────────────────────────────────
   { id:486, title:"눈의 꽃",                  artist:"Park Hyo Shin",         genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:487, title:"Winter Flower",           artist:"Younha",                genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
   { id:488, title:"Snowdrop",                artist:"JISOO",                 genre:"kpop",   moods:["romantic","calm"],        weather:["cold","snowy"]     },
-  { id:489, title:"겨울잠",                    artist:"10cm",                  genre:"kpop",   moods:["calm","melancholy"],      weather:["cold","snowy"]     },
+  { id:489, title:"겨울잠",                    artist:"IU",                  genre:"kpop",   moods:["calm","melancholy"],      weather:["cold","snowy"]     },
   { id:490, title:"December",                artist:"2AM",                   genre:"kpop",   moods:["sad","romantic"],         weather:["cold","snowy"]     },
   { id:491, title:"Miracle",                 artist:"EXO-CBX",               genre:"kpop",   moods:["happy","romantic"],       weather:["cold","snowy"]     },
   { id:492, title:"Christmas Without You",   artist:"ONEW",                  genre:"kpop",   moods:["sad","romantic"],         weather:["cold","snowy"]     },
@@ -581,7 +580,19 @@ const LOCAL_SONGS = [
   { id:548, title:"Turn Down for What",      artist:"DJ Snake",              genre:"hiphop", moods:["energetic"],              weather:["hot","sunny"]      },
   { id:549, title:"Boom",                    artist:"RedOne",                genre:"pop",    moods:["energetic","happy"],      weather:["hot","sunny"]      },
   { id:550, title:"Don't You Worry Child",   artist:"Swedish House Mafia",   genre:"pop",    moods:["energetic","happy"],      weather:["hot","sunny"]      },
+  // ── PSY 추가 ─────────────────────────────────────────────────────
+  { id:551, title:"CELEB",                  artist:"PSY",                   genre:"kpop",   moods:["happy","energetic"],      weather:["sunny","hot"]      },
+  { id:552, title:"Gangnam Style",          artist:"PSY",                   genre:"kpop",   moods:["energetic","happy"],      weather:["sunny","hot"]      },
+  { id:553, title:"That That",              artist:"PSY",                   genre:"kpop",   moods:["energetic","happy"],      weather:["sunny","hot"]      },
 ];
+
+/* ───── 로컬 DB 곡명→아티스트 역색인 (iTunes 결과 검증용) ───── */
+const LOCAL_TITLE_ARTISTS = new Map();
+LOCAL_SONGS.forEach(s => {
+  const key = s.title.toLowerCase().trim();
+  if (!LOCAL_TITLE_ARTISTS.has(key)) LOCAL_TITLE_ARTISTS.set(key, []);
+  LOCAL_TITLE_ARTISTS.get(key).push(s.artist.toLowerCase());
+});
 
 /* ───── 검색어 매핑 ───── */
 const GENRE_SEARCH_TERMS = {
@@ -697,7 +708,7 @@ const iTunes = (() => {
       try {
         const results = await search(q, 15, itunesOffset);
         for (const t of results) {
-          if (!seen.has(t.id) && !isJunkTrack(t)) { seen.add(t.id); tracks.push(t); }
+          if (!seen.has(t.id) && !isJunkTrack(t) && !isItunesMismatch(t)) { seen.add(t.id); tracks.push(t); }
         }
       } catch (e) {
         console.warn('[iTunes]', q, e.message);
@@ -718,6 +729,15 @@ const iTunes = (() => {
 
   async function getWeatherRecommendations(weather, genres) {
     return getByQueries(WEATHER_QUERIES[weather] || [], WEATHER_KEYWORDS[weather] || [], genres);
+  }
+
+  // 로컬 DB에 등록된 곡명인데 아티스트가 다를 경우 필터 (iTunes DB 오류 방지)
+  function isItunesMismatch(t) {
+    const titleKey    = (t.trackName  || '').toLowerCase().trim();
+    const itunesArtist = (t.artistName || '').toLowerCase();
+    const knownArtists = LOCAL_TITLE_ARTISTS.get(titleKey);
+    if (!knownArtists) return false;
+    return !knownArtists.some(a => a.includes(itunesArtist) || itunesArtist.includes(a));
   }
 
   // 컴필레이션·BGM·커버·반주 앨범 필터
@@ -758,10 +778,10 @@ const iTunes = (() => {
     if (!name) return null;
     const n = name.toLowerCase();
     if (n.includes('k-pop') || n.includes('korean')) return 'kpop';
-    if (n.includes('j-pop') || n.includes('japanese')) return 'jpop';
-    if (n.includes('hip-hop') || n.includes('rap')) return 'hiphop';
-    if (n.includes('r&b') || n.includes('soul')) return 'rnb';
-    if (n.includes('indie') || n.includes('folk')) return 'indie';
+    if (n.includes('j-pop') || n.includes('japanese') || n.includes('anime')) return 'jpop';
+    if (n.includes('hip-hop') || n.includes('rap') || n.includes('urban contemporary')) return 'hiphop';
+    if (n.includes('r&b') || n.includes('soul') || n.includes('rhythm')) return 'rnb';
+    if (n.includes('indie') || n.includes('folk') || n.includes('singer-songwriter')) return 'indie';
     if (n.includes('pop')) return 'pop';
     return null;
   }
@@ -967,24 +987,30 @@ async function recommend() {
   const enrichedMood    = enrichedMoodR.status    === 'fulfilled' ? enrichedMoodR.value    : localMoodSongs;
   const enrichedWeather = enrichedWeatherR.status === 'fulfilled' ? enrichedWeatherR.value : localWeatherSongs;
 
+  // iTunes 결과에 장르 필터 적용 (장르 불명 곡은 특정 장르 선택 시 제외)
+  const applyGenreFilter = (tracks) =>
+    genres.includes('all') ? tracks : tracks.filter(t => t.genre && genres.includes(t.genre));
+
   // 3. 기분 결과: 로컬 10 + iTunes 6
   if (selectedMood) {
-    const itSupplement = moodItunesRes.status === 'fulfilled' ? moodItunesRes.value : [];
-    const deduped = deduplicateByTitleArtist(itSupplement, enrichedMood).slice(0, 6);
-    moodResults = [...enrichedMood, ...deduped];
+    const itSupplement = applyGenreFilter(moodItunesRes.status === 'fulfilled' ? moodItunesRes.value : []);
+    const itDiverse    = pickDiverseArtists(itSupplement, itSupplement.length);
+    const deduped      = deduplicateByTitleArtist(itDiverse, enrichedMood).slice(0, 6);
+    moodResults = limitArtistOccurrences([...enrichedMood, ...deduped]);
   } else {
     moodResults = [];
   }
 
   // 4. 날씨 결과: 로컬 10 + iTunes 6 (기분 중복 제거)
   if (selectedWeather) {
-    const itSupplement = weatherItunesRes.status === 'fulfilled' ? weatherItunesRes.value : [];
+    const itSupplement = applyGenreFilter(weatherItunesRes.status === 'fulfilled' ? weatherItunesRes.value : []);
     const moodKeys     = new Set(moodResults.map(s => `${s.artist.toLowerCase()}::${normalizeTitle(s.title)}`));
     const itFiltered   = itSupplement.filter(t =>
       !moodKeys.has(`${t.artist.toLowerCase()}::${normalizeTitle(t.title)}`)
     );
-    const deduped = deduplicateByTitleArtist(itFiltered, enrichedWeather).slice(0, 6);
-    weatherResults = [...enrichedWeather, ...deduped];
+    const itDiverse    = pickDiverseArtists(itFiltered, itFiltered.length);
+    const deduped      = deduplicateByTitleArtist(itDiverse, enrichedWeather).slice(0, 6);
+    weatherResults = limitArtistOccurrences([...enrichedWeather, ...deduped]);
   } else {
     weatherResults = [];
   }
@@ -1026,6 +1052,38 @@ async function recommend() {
   setTimeout(() => tabBar.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
 }
 
+function limitArtistOccurrences(songs, maxPerArtist = 2) {
+  const counts = new Map();
+  return songs.filter(s => {
+    const key = s.artist.toLowerCase();
+    const c   = counts.get(key) || 0;
+    if (c >= maxPerArtist) return false;
+    counts.set(key, c + 1);
+    return true;
+  });
+}
+
+function pickDiverseArtists(pool, count) {
+  const result = [];
+  const usedArtists = new Set();
+  for (const song of pool) {
+    if (!usedArtists.has(song.artist)) {
+      result.push(song);
+      usedArtists.add(song.artist);
+      if (result.length >= count) break;
+    }
+  }
+  if (result.length < count) {
+    for (const song of pool) {
+      if (!result.includes(song)) {
+        result.push(song);
+        if (result.length >= count) break;
+      }
+    }
+  }
+  return result;
+}
+
 function localRecommendByMood(genres, count = 10) {
   const filter = genres.includes('all') ? null : genres;
   const pool = LOCAL_SONGS.filter(s =>
@@ -1037,7 +1095,7 @@ function localRecommendByMood(genres, count = 10) {
     pool.forEach(s => shownSongIds.delete(String(s.id)));
     unshown = pool.filter(s => !shownSongIds.has(String(s.id)));
   }
-  return shuffle(unshown).slice(0, count).map(s => ({ ...s, source: 'local' }));
+  return pickDiverseArtists(shuffle(unshown), count).map(s => ({ ...s, source: 'local' }));
 }
 
 function localRecommendByWeather(genres, count = 10) {
@@ -1051,7 +1109,7 @@ function localRecommendByWeather(genres, count = 10) {
     pool.forEach(s => shownSongIds.delete(String(s.id)));
     unshown = pool.filter(s => !shownSongIds.has(String(s.id)));
   }
-  return shuffle(unshown).slice(0, count).map(s => ({ ...s, source: 'local' }));
+  return pickDiverseArtists(shuffle(unshown), count).map(s => ({ ...s, source: 'local' }));
 }
 
 async function enrichWithItunes(songs) {
@@ -1069,11 +1127,22 @@ async function enrichWithItunes(songs) {
         const res  = await fetch(`/api/itunes?${params}`);
         if (!res.ok) return song;
         const data = await res.json();
-        const match = (data.results || []).find(t => {
-          const ta = (t.artistName || '').toLowerCase();
-          const sa = song.artist.toLowerCase();
-          return ta.includes(sa) || sa.includes(ta);
-        }) || (data.results || [])[0];
+        const norm = s => s.toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
+        const songArtistN = norm(song.artist);
+        const songTitleN  = norm(song.title);
+        const match =
+          // 1순위: 아티스트 + 곡명 모두 일치
+          (data.results || []).find(t => {
+            const ta = norm(t.artistName || '');
+            const tt = norm(t.trackName  || '');
+            return (ta.includes(songArtistN) || songArtistN.includes(ta)) &&
+                   (tt.includes(songTitleN)  || songTitleN.includes(tt));
+          }) ||
+          // 2순위: 아티스트만 일치 (곡명 불일치 시 previewUrl 오염 방지용으로 제한적 사용)
+          (data.results || []).find(t => {
+            const ta = norm(t.artistName || '');
+            return ta.includes(songArtistN) || songArtistN.includes(ta);
+          });
         if (match) {
           const extra = {
             albumArt:   match.artworkUrl100?.replace('100x100bb', '300x300bb') || null,
