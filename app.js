@@ -1127,7 +1127,8 @@ async function enrichWithItunes(songs) {
         const res  = await fetch(`/api/itunes?${params}`);
         if (!res.ok) return song;
         const data = await res.json();
-        const norm = s => s.toLowerCase().replace(/[^a-z0-9가-힣]/g, '');
+        // a-z, 숫자, 한글, 일본어(히라가나·카타카나·한자) 유지
+        const norm = s => s.toLowerCase().replace(/[^a-z0-9가-힣぀-鿿]/g, '');
         const songArtistN = norm(song.artist);
         const songTitleN  = norm(song.title);
         const match =
@@ -1135,13 +1136,19 @@ async function enrichWithItunes(songs) {
           (data.results || []).find(t => {
             const ta = norm(t.artistName || '');
             const tt = norm(t.trackName  || '');
-            return (ta.includes(songArtistN) || songArtistN.includes(ta)) &&
-                   (tt.includes(songTitleN)  || songTitleN.includes(tt));
+            const artistOk = songArtistN && ta && (ta.includes(songArtistN) || songArtistN.includes(ta));
+            const titleOk  = songTitleN  && tt && (tt.includes(songTitleN)  || songTitleN.includes(tt));
+            return artistOk && titleOk;
           }) ||
-          // 2순위: 아티스트만 일치 (곡명 불일치 시 previewUrl 오염 방지용으로 제한적 사용)
+          // 2순위: 곡명만 일치 (일본어 아티스트는 iTunes 표기가 달라 아티스트 매칭이 안 될 수 있음)
+          (data.results || []).find(t => {
+            const tt = norm(t.trackName || '');
+            return songTitleN && tt && (tt.includes(songTitleN) || songTitleN.includes(tt));
+          }) ||
+          // 3순위: 아티스트만 일치
           (data.results || []).find(t => {
             const ta = norm(t.artistName || '');
-            return ta.includes(songArtistN) || songArtistN.includes(ta);
+            return songArtistN && ta && (ta.includes(songArtistN) || songArtistN.includes(ta));
           });
         if (match) {
           const extra = {
