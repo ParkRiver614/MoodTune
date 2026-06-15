@@ -582,6 +582,9 @@ const LOCAL_SONGS = [
   { id:551, title:"CELEB",                  artist:"PSY",                   genre:"kpop",   moods:["happy","energetic"],      weather:["sunny","hot"]      },
   { id:552, title:"Gangnam Style",          artist:"PSY",                   genre:"kpop",   moods:["energetic","happy"],      weather:["sunny","hot"]      },
   { id:553, title:"That That",              artist:"PSY",                   genre:"kpop",   moods:["energetic","happy"],      weather:["sunny","hot"]      },
+  { id:554, title:"Homebody",              artist:"pH-1",                  genre:"hiphop", moods:["calm","melancholy"],      weather:["rainy","cloudy"]   },
+  { id:555, title:"Homesick",              artist:"Benzamin",              genre:"rnb",    moods:["sad","melancholy"],       weather:["rainy","cold"]     },
+  { id:556, title:"눈",                    artist:"자이언티",               genre:"rnb",    moods:["romantic","calm"],        weather:["cold","snowy"]     },
 ];
 
 /* ───── 로컬 DB 곡명→아티스트 역색인 (iTunes 결과 검증용) ───── */
