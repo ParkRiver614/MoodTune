@@ -681,7 +681,8 @@ const GENRE_COLORS   = { kpop:"#ff6b9d", jpop:"#a78bfa", pop:"#60a5fa", hiphop:"
 const iTunes = (() => {
 
   async function search(term, limit = 15, offset = 0) {
-    const params = new URLSearchParams({ term, limit, offset, country: 'KR', lang: 'ko_kr' });
+    // country=KR로 검색하면 결과가 0곡으로 돌아와 US 스토어 기준으로 검색한다
+    const params = new URLSearchParams({ term, limit, offset, country: 'US' });
     const res = await fetch(`/api/itunes?${params}`);
     if (!res.ok) throw new Error(`iTunes 오류 ${res.status}`);
     const data = await res.json();
@@ -1123,7 +1124,7 @@ async function enrichWithItunes(songs) {
       }
       try {
         const params = new URLSearchParams({
-          term: `${song.artist} ${song.title}`, limit: 10, country: 'KR', media: 'music', entity: 'song',
+          term: `${song.artist} ${song.title}`, limit: 10, country: 'US', media: 'music', entity: 'song',
         });
         const res  = await fetch(`/api/itunes?${params}`);
         if (!res.ok) return song;
