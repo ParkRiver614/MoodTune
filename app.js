@@ -734,9 +734,10 @@ const iTunes = (() => {
   }
 
   // 로컬 DB에 등록된 곡명인데 아티스트가 다를 경우 필터 (iTunes DB 오류 방지)
+  // search()가 formatTrack()을 거친 객체(title/artist/album)를 넘기므로 두 형태를 모두 읽는다
   function isItunesMismatch(t) {
-    const titleKey    = (t.trackName  || '').toLowerCase().trim();
-    const itunesArtist = (t.artistName || '').toLowerCase();
+    const titleKey    = (t.title  || t.trackName  || '').toLowerCase().trim();
+    const itunesArtist = (t.artist || t.artistName || '').toLowerCase();
     const knownArtists = LOCAL_TITLE_ARTISTS.get(titleKey);
     if (!knownArtists) return false;
     return !knownArtists.some(a => a.includes(itunesArtist) || itunesArtist.includes(a));
@@ -755,9 +756,9 @@ const iTunes = (() => {
   ];
 
   function isJunkTrack(t) {
-    const title  = t.trackName       || '';
-    const artist = t.artistName      || '';
-    const album  = t.collectionName  || '';
+    const title  = t.title  || t.trackName      || '';
+    const artist = t.artist || t.artistName     || '';
+    const album  = t.album  || t.collectionName || '';
     return JUNK_PATTERNS.some(re => re.test(title) || re.test(artist) || re.test(album));
   }
 
@@ -1224,7 +1225,10 @@ function createSongCard(song, idx) {
           <div class="preview-progress-fill"></div>
         </div>` : ''}
     </div>` :
-    `<div class="song-art-bar" style="background:linear-gradient(90deg,${genreColor}aa,${genreColor}33)"></div>`;
+    // 앨범 아트를 찾지 못한 곡도 카드 높이가 맞도록 같은 크기의 자리표시 이미지를 둔다
+    `<div class="song-art-container" style="background:linear-gradient(135deg,${genreColor}66,#16213e);display:flex;align-items:center;justify-content:center">
+      <span style="font-size:3rem;opacity:0.6">🎵</span>
+    </div>`;
 
   const genreTag   = genreKey
     ? `<span class="tag tag-genre ${genreKey}">${genreKey.toUpperCase()}</span>` : '';
